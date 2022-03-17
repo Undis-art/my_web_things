@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html>
+
+        <head> <!-- to toggle tag as comment: <C-Y>/ in insert mode-->
+                <link rel="stylesheet" href="mystyle.css">
+                <title>Undis website</title>
+                <!-- <meta http-equiv = "refresh" content = "300" /> -->
+        </head>
+
+        <body>
+                <header > <!--Intro panel--> 
+                        <img id = "kaari" src="./images/kaari2.png"
+                            alt = "Kaari Image" height = "150"/>
+                </header>
+                <hr />
+                <nav>
+                        <div id="thoughts" class="box">
+                                <a href=""><b>Thoughts</b></a>
+                                <!-- <p>
+                                Thoughts and life in blog style.
+                                </p> -->
+                        </div> 
+                        <div id="recipes" class="box">
+                                <a href="reseptit.html"><b>Reseptit</b></a>
+                                <!-- <p>
+                                Meillä usein käytössä olevia reseptejä.
+                                </p> -->
+                        </div>
+                        <div id="Värityskirjat" class="box">
+                                <a href=""><b>Värityskirjat</b></a>
+                                <!-- <p>
+                                        Värityksiäni.
+                                </p> -->
+                        </div>
+                </nav>
+                <hr />
+                <div>
+                        <form action="/testsjpost" style ="background-color:white">
+                                <fieldset>
+                                        <legend> Foo vai bar? </legend>
+                                        <input id="radiobar" type="radio" name = "foobar" value = "bar" />
+                                        <label for="radiobar"> Foo </label>
+                                        <input id="radiofoo" type="radio" name = "foobar" value = "foo" checked/>
+                                        <label for="radiofoo"> Bar </label>
+                                        <input id="radiobaz" type="radio" name = "foobar" value = "Baz" />
+                                        <label for="radiobaz"> Baz </label>
+                                        <br />
+                                        <p> Anna mennä, ota ota:</p>
+                                        <input type="checkbox" name = "foobar_c" value = "bar" />
+                                        <label for="check"> Foo </label>
+                                        <input type="checkbox" name = "foobar_c" value = "foo" checked/>
+                                        <label for="check"> Bar </label>
+                                        <input type="checkbox" name = "foobar_c" value = "Baz" />
+                                        <label for=""> Baz </label>
+                                        <input type="checkbox" name = "foobar_c" value = "Qux" />
+                                        <label for=""> Qux </label>
+                                        <input type="checkbox" name = "foobar_c" value = "Quux" />
+                                        <label for=""> Quux </label>
+                                        <br />
+                                        <p> Vielä kerran: </p>
+                                        <select id="foobar_drop" name="">
+                                                <option value="Foo">Foo</option>
+                                                <option value="Bar">Bar</option>
+                                                <option value="Qux">Qux</option>
+                                        </select>
+                                        <br /><br />
+                                        <input type="submit" value="Olen tehnyt valintani" onclick="ValidateFooBar();" />
+                                </fieldset>
+                        </form>
+                </div>
+
+                <script type="text/javascript">  
+                        function ValidateFooBar()  
+{  
+        var checkboxes = document.getElementsByName("foobar_c");  
+        var n = 0;  
+        for(var i = 0; i < checkboxes.length; i++)  
+        {  
+                if(checkboxes[i].checked)  
+                        n++;  
+        }  
+        if(n < 3)  
+        {  
+                alert("Aika vähän.");  
+                return true;  
+        }  
+        if(n === 5) {
+                alert("Noniiiin!");  
+                return true;  
+        }
+}  
+                </script>
+
+                <div id = "menu" align = "middle">
+                        <a href="info.html">info</a> |
+                        <a href="info.html">contact</a> 
+                </div>
+        </body>
+
+</html>
